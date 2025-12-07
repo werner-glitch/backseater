@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Backseat</title>
+  </head>
+  <body>
+    <div style="padding:12px;width:260px;">
+      <h3>Backseat</h3>
+      <div>
+        <a href="#" id="openOptions">Profile verwalten</a>
+      </div>
+      <div style="margin-top:8px;">
+        <small>Open options to configure profiles and servers.</small>
+      </div>
+    </div>
+    <script>
+      document.getElementById('openOptions').addEventListener('click', (e) => {
+        e.preventDefault();
+        chrome.runtime.openOptionsPage();
+      });
+    </script>
+  </body>
+</html>
